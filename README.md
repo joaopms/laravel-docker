@@ -12,7 +12,9 @@ Dockerized Laravel environment with PHP, nginx and MariaDB
 - Bring up the containers with `docker-compose up -d`
 - Install Laravel with `composer create-project --prefer-dist laravel/laravel src/`
 - Configure the Laravel environment file located at `src/.env`
+- Reset the containers with `docker-compose restart`
 - Open http://localhost:8080
+- Have fun coding! :D
 
 ## Database administration with MySQL CLI client
 If you don't have MySQL/MariaDB installed on the host, you can use the MySQL CLI client that comes with the database container:
