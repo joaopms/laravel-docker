@@ -4,6 +4,7 @@ networks:
   laravel:
 
 services:
+  # TODO Env file
   nginx:
     image: nginx:stable-alpine
     container_name: nginx
@@ -16,7 +17,19 @@ services:
       - php
     networks:
       - laravel
-      
+
+  mariadb:
+    image: mariadb
+    container_name: mariadb
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./database:/var/lib/mysql
+    env_file:
+      - ./config.env
+    networks:
+      - laravel
+
   php:
     build:
       context: .
