@@ -32,12 +32,12 @@ services:
   php:
     build:
       context: .
-      dockerfile: php-Dockerfile
+      dockerfile: php-dockerfile
     container_name: php
     working_dir: /var/www
-    volumes:
-      - ./src:/var/www
     ports:
       - "9000:9000"
+    volumes:
+      - ./src:/var/www
     networks:
       - laravel
