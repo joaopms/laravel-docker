@@ -1,0 +1,17 @@
+version: '3'
+
+networks:
+  laravel:
+
+services:
+  php:
+    build:
+      context: .
+      dockerfile: php-Dockerfile
+    container_name: php
+    volumes:
+      - ./src:/var/www
+    ports:
+      - "9000:9000"
+    networks:
+      - laravel
