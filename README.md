@@ -1,13 +1,21 @@
 # laravel-docker
 Dockerized Laravel environment with PHP, nginx and MariaDB.
 
+## Pre-requisites
+- PHP
+  - Composer
+
 ## How to run
 - Copy `config.example.env` to `config.env` and tweak to your liking
-- `docker-compose up -d`
+- Bring up the containers with `docker-compose up -d`
+- Install Laravel with `composer create-project --prefer-dist laravel/laravel src/`
 - Open http://localhost:8080
 
-## Database administration
+## Database administration with MySQL CLI client
 - `docker-compose exec mariadb mysql -u laravel -p`
+
+## Fixing file permissions
+If you ever have problems with file permissions, run `fix_perms.sh`. This script will make you the owner of `database` and `src` directories.
 
 ## Used Ports
 `8080`: nginx
