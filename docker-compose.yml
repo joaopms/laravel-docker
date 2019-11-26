@@ -5,7 +5,7 @@ networks:
 
 services:
   nginx:
-    image: vcarreira/nginx-php5-fpm
+    image: vcarreira/nginx-php7-fpm
     container_name: nginx
     ports:
       - "8080:80"
