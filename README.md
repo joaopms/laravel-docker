@@ -24,6 +24,6 @@ If you don't have MySQL/MariaDB installed on the host, you can use the MySQL CLI
 If you ever have problems with file permissions, run `fix_perms.sh`. This script will make you the owner of `database` and `src` directories.
 
 ## Used Ports
-- `8080`: nginx
+- `8080`: nginx (Exposed)
+- `3306`: MariaDB (Exposed)
 - `9000`: php-fpm
-- `3306`: MariaDB
