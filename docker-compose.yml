@@ -11,6 +11,7 @@ services:
       - "8080:80"
     volumes:
       - ./src:/var/www
+      - ./src/storage/app/public:/var/www/public/storage
       - ./nginx.conf:/etc/nginx/sites-enabled/default.conf
       - ./logs/nginx:/var/log/nginx
     networks:
